@@ -1,5 +1,5 @@
 name: Kokoro TTS (Wyoming)
-version: "1.1.0-2"
+version: "1.1.0-3"
 slug: kokoro_wyoming
 description: Kokoro-82M text-to-speech over Wyoming, with streaming synthesis
 url: https://github.com/SkyeLowry/ha-apps/tree/main/kokoro_wyoming

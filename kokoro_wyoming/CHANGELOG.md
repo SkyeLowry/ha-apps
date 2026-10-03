@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0-3 (2026-10-03)
+
+- Fix: build failed on Home Assistant OS (`failed to fetch remote ...kokoro-wyoming.git`). Docker's git-URL `ADD` needs git on the host, which HA OS doesn't ship. The source is now downloaded as GitHub's archive of the pinned commit, and the build fails if the archive's commit ID doesn't match.
+
 ## 1.1.0-2 (2026-10-03)
 
 - Fix: the app failed to start (`exec: /usr/local/bin/python3: no such file or directory`). Every image upstream publishes on Docker Hub, including `1.1.0` and `latest`, is the 2.4 GB CUDA build, whose Python lives at `/usr/bin/python3`.

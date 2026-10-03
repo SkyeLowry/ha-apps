@@ -9,8 +9,10 @@ ENV PYTHONPATH=/opt/kokoro-wyoming \
     PIP_NO_CACHE_DIR=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1
 
-# Upstream server source, pinned to the v1.1.0 tag (commit cc3ec386).
-ADD https://github.com/nordwestt/kokoro-wyoming.git#v1.1.0 /opt/kokoro-wyoming
+# Upstream server source at the v1.1.0 commit, fetched over HTTPS and checked
+# against the pinned commit (HA OS's Docker has no git, so no git-URL ADD).
+COPY fetch_src.py /tmp/fetch_src.py
+RUN python3 /tmp/fetch_src.py && rm /tmp/fetch_src.py
 
 # Kokoro v1.0 model and voices, verified by checksum (same files upstream uses).
 ADD --checksum=sha256:7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5 \
