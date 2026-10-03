@@ -1,0 +1,9 @@
+version: 2
+updates:
+  # Upstream base image for the Kokoro app. A Dependabot PR only bumps the
+  # Dockerfile tag: also bump version in config.yaml and add a CHANGELOG entry
+  # in the same PR, or Home Assistant won't offer the update.
+  - package-ecosystem: docker
+    directory: /kokoro_wyoming
+    schedule:
+      interval: weekly

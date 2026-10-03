@@ -1,0 +1,7 @@
+configuration:
+  voice:
+    name: Default voice
+    description: Kokoro voice used when Home Assistant doesn't pick one, e.g. af_heart, bf_emma, bm_lewis.
+  speed:
+    name: Speed
+    description: Speech rate multiplier (1.0 = normal).
