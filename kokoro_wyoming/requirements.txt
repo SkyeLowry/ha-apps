@@ -1,6 +1,6 @@
 # Runtime for nordwestt/kokoro-wyoming v1.1.0, CPU only.
 # Tested together on Python 3.13 (Wyoming describe, synthesize and streaming).
-kokoro-onnx==0.4.5
+kokoro-onnx==0.4.7
 onnxruntime==1.30.0
 numpy==2.5.3
 wyoming==1.10.2
