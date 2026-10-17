@@ -3,7 +3,7 @@ ARG BUILD_FROM
 # CPU-only build from upstream source. The images upstream publishes on Docker Hub
 # (latest, 1.1.0, ...) are all the 2.4 GB CUDA build, which has no python at the
 # path its own entrypoint expects and is useless on a GPU-less HA host.
-FROM python:3.13-slim
+FROM python:3.14-slim
 
 ENV PYTHONPATH=/opt/kokoro-wyoming \
     PIP_NO_CACHE_DIR=1 \
